@@ -457,8 +457,9 @@ export default function Home() {
             <div className="space-y-8">
               <div className="text-center lg:text-left">
                 <h4 className="text-2xl font-light text-white mb-6">
-                  Let's Connect
-                </h4>                <p className="text-base text-white/70 leading-relaxed mb-8">
+                  Let&apos;s Connect
+                </h4>
+                <p className="text-base text-white/70 leading-relaxed mb-8">
                   I&apos;m always interested in discussing new opportunities, innovative projects, 
                   and potential collaborations. Feel free to reach out.
                 </p>
