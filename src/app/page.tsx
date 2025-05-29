@@ -64,9 +64,7 @@ export default function Home() {
                 Full Stack
                 <br />
                 <span className="text-white/80">Developer</span>
-              </h2>
-
-              <p className="text-lg md:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+              </h2>              <p className="text-lg md:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
                 Crafting exceptional digital experiences through clean code, thoughtful design, 
                 and innovative solutions. Specialized in building scalable applications that drive business growth.
               </p>
@@ -99,10 +97,9 @@ export default function Home() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg p-8 shadow-2xl">
-              <div className="space-y-6">
+            <div className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg p-8 shadow-2xl">              <div className="space-y-6">
                 <p className="text-lg text-white/80 leading-relaxed font-light">
-                  I'm a dedicated full-stack developer with over 5 years of experience 
+                  I&apos;m a dedicated full-stack developer with over 5 years of experience 
                   building scalable web applications and digital solutions.
                 </p>
                 <p className="text-base text-white/70 leading-relaxed font-light">
@@ -185,11 +182,10 @@ export default function Home() {
               </div>
                 <div className="space-y-4">
                 {[
-                  { name: "React & Next.js", level: 95 },
-                  { name: "TypeScript", level: 90 },
+                  { name: "React & Next.js", level: 95 },                  { name: "TypeScript", level: 90 },
                   { name: "Tailwind CSS", level: 98 },
                   { name: "JavaScript ES6+", level: 92 }
-                ].map((skill, index) => (
+                ].map((skill) => (
                   <div key={skill.name} className="space-y-2">
                     <div className="flex justify-between text-white/90">
                       <span className="font-medium text-sm">{skill.name}</span>
@@ -216,11 +212,10 @@ export default function Home() {
               
               <div className="space-y-4">
                 {[
-                  { name: "Node.js", level: 88 },
-                  { name: "Express.js", level: 85 },
+                  { name: "Node.js", level: 88 },                  { name: "Express.js", level: 85 },
                   { name: "PostgreSQL", level: 80 },
                   { name: "MongoDB", level: 82 }
-                ].map((skill, index) => (
+                ].map((skill) => (
                   <div key={skill.name} className="space-y-2">
                     <div className="flex justify-between text-white/90">
                       <span className="font-medium text-sm">{skill.name}</span>
@@ -247,13 +242,12 @@ export default function Home() {
                 <div className="w-12 h-px bg-white/30 mx-auto"></div>
               </div>
               
-              <div className="space-y-4">
-                {[
+              <div className="space-y-4">                {[
                   { name: "Git & GitHub", level: 95 },
                   { name: "Docker", level: 75 },
                   { name: "AWS", level: 70 },
                   { name: "Vercel", level: 90 }
-                ].map((skill, index) => (
+                ].map((skill) => (
                   <div key={skill.name} className="space-y-2">
                     <div className="flex justify-between text-white/90">
                       <span className="font-medium text-sm">{skill.name}</span>
@@ -278,9 +272,8 @@ export default function Home() {
               {[
                 { title: "Full Stack Expert", desc: "5+ Years Experience" },
                 { title: "Performance Focus", desc: "100+ Apps Optimized" },
-                { title: "Problem Solver", desc: "1000+ Issues Resolved" },
-                { title: "Open Source", desc: "50+ Contributions" }
-              ].map((achievement, index) => (
+                { title: "Problem Solver", desc: "1000+ Issues Resolved" },                { title: "Open Source", desc: "50+ Contributions" }
+              ].map((achievement) => (
                 <div key={achievement.title} className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg p-4 text-center hover:bg-black/30 transition-all duration-300">
                   <div className="text-lg font-medium text-white mb-1">{achievement.title}</div>
                   <div className="text-white/70 text-sm">{achievement.desc}</div>
@@ -465,9 +458,8 @@ export default function Home() {
               <div className="text-center lg:text-left">
                 <h4 className="text-2xl font-light text-white mb-6">
                   Let's Connect
-                </h4>
-                <p className="text-base text-white/70 leading-relaxed mb-8">
-                  I'm always interested in discussing new opportunities, innovative projects, 
+                </h4>                <p className="text-base text-white/70 leading-relaxed mb-8">
+                  I&apos;m always interested in discussing new opportunities, innovative projects, 
                   and potential collaborations. Feel free to reach out.
                 </p>
               </div>
@@ -514,12 +506,11 @@ export default function Home() {
               </div>
 
               {/* Social Links */}
-              <div className="flex justify-center lg:justify-start space-x-4 pt-6">
-                {[
+              <div className="flex justify-center lg:justify-start space-x-4 pt-6">                {[
                   { href: "https://github.com/mizulike", label: "GitHub" },
                   { href: "https://linkedin.com/in/timothy-flynn", label: "LinkedIn" },
                   { href: "https://twitter.com/timothyflynn", label: "Twitter" }
-                ].map((social, index) => (
+                ].map((social) => (
                   <a 
                     key={social.label}
                     href={social.href}
