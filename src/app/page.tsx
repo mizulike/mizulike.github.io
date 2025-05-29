@@ -12,283 +12,223 @@ export default function Home() {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden">
-      {/* Animated Background Elements */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-black relative overflow-hidden">
+      {/* Subtle Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-20 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-        <div className="absolute bottom-40 right-20 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-6000"></div>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-white/5 rounded-full mix-blend-overlay filter blur-3xl opacity-30"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/3 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/2 rounded-full mix-blend-overlay filter blur-3xl opacity-10"></div>
       </div>
 
-      {/* Mouse Follower */}
+      {/* Minimal Mouse Follower */}
       <div 
-        className="fixed w-6 h-6 bg-white/20 rounded-full pointer-events-none z-50 transition-transform duration-100 ease-out"
+        className="fixed w-4 h-4 bg-white/10 rounded-full pointer-events-none z-50 transition-all duration-150 ease-out"
         style={{
-          left: mousePosition.x - 12,
-          top: mousePosition.y - 12,
-          transform: `scale(${Math.sin(Date.now() * 0.001) * 0.5 + 1})`,
+          left: mousePosition.x - 8,
+          top: mousePosition.y - 8,
         }}
-      ></div>
-
-      {/* Glassmorphism Navigation */}
-      <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-40 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl px-8 py-4 shadow-2xl">
+      ></div>      {/* Professional Navigation */}
+      <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-40 bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg px-6 py-3 shadow-2xl">
         <div className="flex items-center space-x-8">
-          <div className="text-white font-bold text-xl bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+          <div className="text-white font-semibold text-lg">
             TF
           </div>
           <div className="hidden md:flex space-x-6">
-            <a href="#about" className="text-white/80 hover:text-white transition-all duration-300 hover:scale-110">About</a>
-            <a href="#skills" className="text-white/80 hover:text-white transition-all duration-300 hover:scale-110">Skills</a>
-            <a href="#projects" className="text-white/80 hover:text-white transition-all duration-300 hover:scale-110">Projects</a>
-            <a href="#contact" className="text-white/80 hover:text-white transition-all duration-300 hover:scale-110">Contact</a>
+            <a href="#about" className="text-white/70 hover:text-white transition-all duration-300 text-sm font-medium">About</a>
+            <a href="#skills" className="text-white/70 hover:text-white transition-all duration-300 text-sm font-medium">Skills</a>
+            <a href="#projects" className="text-white/70 hover:text-white transition-all duration-300 text-sm font-medium">Projects</a>
+            <a href="#contact" className="text-white/70 hover:text-white transition-all duration-300 text-sm font-medium">Contact</a>
           </div>
         </div>
-      </nav>
-
-      {/* Hero Section with Extreme Visual Impact */}
-      <section className="relative z-10 pt-40 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      </nav>      {/* Professional Hero Section */}
+      <section className="relative z-10 pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center">
-            {/* Floating Avatar with Glassmorphism */}
-            <div className="mb-12 relative">
-              <div className="w-48 h-48 mx-auto bg-gradient-to-br from-pink-400 via-purple-500 to-blue-500 rounded-full p-1 shadow-2xl animate-pulse">
-                <div className="w-full h-full bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center text-white text-8xl font-bold border border-white/20">
+            {/* Clean Professional Avatar */}
+            <div className="mb-16 relative">
+              <div className="w-32 h-32 mx-auto bg-black/30 backdrop-blur-xl rounded-full border border-white/20 shadow-2xl">
+                <div className="w-full h-full rounded-full flex items-center justify-center text-white text-4xl font-light">
                   T
                 </div>
               </div>
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-green-400 rounded-full animate-ping"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-yellow-400 rounded-full animate-bounce"></div>
             </div>
 
-            {/* Animated Typography */}
-            <div className="space-y-6">
-              <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">
-                Hey, I'm <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-gradient">Timothy Flynn</span>
+            {/* Professional Typography */}
+            <div className="space-y-8">
+              <h1 className="text-2xl md:text-3xl font-light text-white/90 mb-6">
+                Timothy Flynn
               </h1>
               
-              <h2 className="text-6xl md:text-8xl font-black text-white mb-8 leading-none animate-fade-in-up animation-delay-200">
-                <span className="bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-                  FULL STACK
-                </span>
+              <h2 className="text-4xl md:text-6xl font-light text-white mb-8 leading-tight">
+                Full Stack
                 <br />
-                <span className="bg-gradient-to-r from-blue-400 via-cyan-500 to-green-400 bg-clip-text text-transparent">
-                  DEVELOPER
-                </span>
+                <span className="text-white/80">Developer</span>
               </h2>
 
-              <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-4xl mx-auto animate-fade-in-up animation-delay-400 leading-relaxed">
-                🚀 Building the future, one pixel at a time. I craft <span className="text-pink-400 font-semibold">mind-blowing</span> digital experiences 
-                that make users go "WOW!" Ready to turn your wildest ideas into reality? 
-                <span className="text-yellow-400 font-semibold">Let's create magic together!</span> ✨
+              <p className="text-lg md:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+                Crafting exceptional digital experiences through clean code, thoughtful design, 
+                and innovative solutions. Specialized in building scalable applications that drive business growth.
               </p>
-            </div>
-
-            {/* Glassmorphism CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up animation-delay-600">
+            </div>            {/* Minimal Professional Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
                 href="#projects" 
-                className="group relative bg-gradient-to-r from-pink-500 to-purple-600 px-12 py-6 rounded-2xl font-bold text-xl text-white shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 hover:scale-110 hover:rotate-1 transform"
+                className="bg-white/10 backdrop-blur-xl border border-white/20 px-8 py-3 rounded-lg font-medium text-white hover:bg-white/15 transition-all duration-300"
               >
-                <span className="relative z-10">🔥 SEE MY WORK</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-700 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                View My Work
               </a>
               
               <a 
                 href="#contact" 
-                className="group bg-white/10 backdrop-blur-lg border-2 border-white/30 text-white px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl hover:bg-white/20 transition-all duration-300 hover:scale-110 hover:-rotate-1 transform"
+                className="bg-black/20 backdrop-blur-xl border border-white/10 text-white/80 px-8 py-3 rounded-lg font-medium hover:bg-black/30 hover:text-white transition-all duration-300"
               >
-                💬 LET'S CHAT
+                Get In Touch
               </a>
             </div>
-
-            {/* Floating Icons */}
-            <div className="mt-16 flex justify-center space-x-8 animate-fade-in-up animation-delay-800">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center border border-white/20 hover:scale-125 transition-transform duration-300 cursor-pointer">
-                <span className="text-2xl">⚡</span>
-              </div>
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center border border-white/20 hover:scale-125 transition-transform duration-300 cursor-pointer">
-                <span className="text-2xl">🎨</span>
-              </div>
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center border border-white/20 hover:scale-125 transition-transform duration-300 cursor-pointer">
-                <span className="text-2xl">🚀</span>
-              </div>
-            </div>
           </div>
         </div>
-      </section>
-
-      {/* About Section - Mind-Blowing Glassmorphism */}
-      <section id="about" className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-10 right-10 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-pulse"></div>
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-pulse animation-delay-2000"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h3 className="text-5xl md:text-7xl font-black text-white mb-6">
-              <span className="bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-                ABOUT ME
-              </span>
+      </section>      {/* Professional About Section */}
+      <section id="about" className="relative py-24 px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
+              About
             </h3>
-            <div className="w-32 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto rounded-full"></div>
+            <div className="w-16 h-px bg-white/30 mx-auto"></div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-10 shadow-2xl hover:bg-white/15 transition-all duration-500 transform hover:scale-105">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg p-8 shadow-2xl">
               <div className="space-y-6">
-                <p className="text-2xl text-white/90 leading-relaxed">
-                  💡 I'm a <span className="text-yellow-400 font-bold">visionary developer</span> who doesn't just write code - 
-                  I craft <span className="text-pink-400 font-bold">digital masterpieces</span> that make people's jaws drop! 
+                <p className="text-lg text-white/80 leading-relaxed font-light">
+                  I'm a dedicated full-stack developer with over 5 years of experience 
+                  building scalable web applications and digital solutions.
                 </p>
-                <p className="text-xl text-white/80 leading-relaxed">
-                  🚀 From mind-bending UIs to rock-solid backends, I turn wild ideas into reality. 
-                  Every project is a chance to push boundaries and create something <span className="text-cyan-400 font-bold">EXTRAORDINARY</span>!
+                <p className="text-base text-white/70 leading-relaxed font-light">
+                  My expertise spans modern frontend frameworks, robust backend systems, 
+                  and cloud infrastructure. I focus on writing clean, maintainable code 
+                  that delivers exceptional user experiences.
                 </p>
-                <p className="text-xl text-white/80 leading-relaxed">
-                  🌟 When I'm not coding, I'm exploring cutting-edge tech, contributing to open source, 
-                  and sharing knowledge with fellow developers. Innovation never sleeps! ⚡
+                <p className="text-base text-white/70 leading-relaxed font-light">
+                  I believe in continuous learning and staying current with emerging technologies 
+                  to provide innovative solutions that drive business growth.
                 </p>
               </div>
               
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-8 flex flex-wrap gap-3">
                 <a 
                   href="https://github.com/mizulike" 
-                  className="group bg-gradient-to-r from-gray-800 to-black px-6 py-3 rounded-xl text-white font-semibold hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-gray-500/25"
+                  className="bg-black/30 backdrop-blur-xl border border-white/20 px-4 py-2 rounded-lg text-white/80 font-medium hover:bg-black/40 hover:text-white transition-all duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="group-hover:animate-pulse">💻 GitHub</span>
+                  GitHub
                 </a>
                 <a 
                   href="https://linkedin.com/in/timothy-flynn" 
-                  className="group bg-gradient-to-r from-blue-600 to-blue-800 px-6 py-3 rounded-xl text-white font-semibold hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+                  className="bg-black/30 backdrop-blur-xl border border-white/20 px-4 py-2 rounded-lg text-white/80 font-medium hover:bg-black/40 hover:text-white transition-all duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="group-hover:animate-pulse">💼 LinkedIn</span>
+                  LinkedIn
                 </a>
                 <a 
                   href="https://twitter.com/timothyflynn" 
-                  className="group bg-gradient-to-r from-sky-400 to-blue-500 px-6 py-3 rounded-xl text-white font-semibold hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-sky-500/25"
+                  className="bg-black/30 backdrop-blur-xl border border-white/20 px-4 py-2 rounded-lg text-white/80 font-medium hover:bg-black/40 hover:text-white transition-all duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="group-hover:animate-pulse">🐦 Twitter</span>
+                  Twitter
                 </a>
               </div>
             </div>
 
             <div className="relative">
-              <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 shadow-2xl">
-                <div className="aspect-square bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-9xl shadow-2xl animate-bounce-slow">
-                  👨‍💻
+              <div className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg p-6 shadow-2xl text-center">
+                <div className="w-24 h-24 mx-auto bg-white/10 rounded-full flex items-center justify-center text-white text-3xl mb-4">
+                  💼
                 </div>
-                <div className="mt-6 text-center">
-                  <div className="text-white/80 text-lg font-semibold">Currently Building</div>
-                  <div className="text-2xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-                    The Future! 🚀
-                  </div>
+                <div className="text-white/80 text-sm font-medium mb-2">Currently</div>
+                <div className="text-lg font-medium text-white">
+                  Building Solutions
                 </div>
               </div>
               
-              {/* Floating achievement badges */}
-              <div className="absolute -top-4 -right-4 bg-yellow-400 text-black px-4 py-2 rounded-full font-bold text-sm shadow-lg animate-float">
-                🏆 5+ Years
+              {/* Clean achievement indicators */}
+              <div className="absolute -top-3 -right-3 bg-white/20 backdrop-blur-xl border border-white/30 text-white px-3 py-1 rounded-full font-medium text-sm">
+                5+ Years
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-green-400 text-black px-4 py-2 rounded-full font-bold text-sm shadow-lg animate-float animation-delay-1000">
-                ✨ 50+ Projects
+              <div className="absolute -bottom-3 -left-3 bg-white/20 backdrop-blur-xl border border-white/30 text-white px-3 py-1 rounded-full font-medium text-sm">
+                50+ Projects
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Skills Section - Absolutely INSANE Design */}
-      <section id="skills" className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-1/4 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob"></div>
-          <div className="absolute bottom-20 right-1/4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob animation-delay-2000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-pulse"></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h3 className="text-5xl md:text-7xl font-black text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                SUPERPOWERS
-              </span>
+      </section>      {/* Professional Skills Section */}
+      <section id="skills" className="relative py-24 px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
+              Technical Skills
             </h3>
-            <p className="text-2xl text-white/80 max-w-3xl mx-auto">
-              🔥 The arsenal of technologies I wield to create digital magic! ⚡
-            </p>
-            <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full mt-6"></div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="w-16 h-px bg-white/30 mx-auto"></div>
+          </div>          <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Frontend Card */}
-            <div className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-500 transform hover:scale-105 hover:rotate-1">
+            <div className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg p-8 shadow-2xl hover:bg-black/30 transition-all duration-300">
               <div className="text-center mb-6">
-                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-pink-500 to-red-500 rounded-2xl flex items-center justify-center text-4xl mb-4 shadow-lg group-hover:animate-bounce">
-                  🎨
+                <div className="w-16 h-16 mx-auto bg-white/10 rounded-lg flex items-center justify-center text-2xl mb-4">
+                  <span className="text-white/80">⚡</span>
                 </div>
-                <h4 className="text-2xl font-bold text-white mb-2">Frontend Magic</h4>
-                <div className="w-16 h-1 bg-gradient-to-r from-pink-500 to-red-500 mx-auto rounded-full"></div>
+                <h4 className="text-xl font-medium text-white mb-2">Frontend</h4>
+                <div className="w-12 h-px bg-white/30 mx-auto"></div>
               </div>
-              
-              <div className="space-y-4">
+                <div className="space-y-4">
                 {[
-                  { name: "React & Next.js", level: 95, color: "blue" },
-                  { name: "TypeScript", level: 90, color: "indigo" },
-                  { name: "Tailwind CSS", level: 98, color: "cyan" },
-                  { name: "JavaScript ES6+", level: 92, color: "yellow" }
+                  { name: "React & Next.js", level: 95 },
+                  { name: "TypeScript", level: 90 },
+                  { name: "Tailwind CSS", level: 98 },
+                  { name: "JavaScript ES6+", level: 92 }
                 ].map((skill, index) => (
                   <div key={skill.name} className="space-y-2">
                     <div className="flex justify-between text-white/90">
-                      <span className="font-semibold">{skill.name}</span>
-                      <span className="text-sm">{skill.level}%</span>
+                      <span className="font-medium text-sm">{skill.name}</span>
+                      <span className="text-xs text-white/60">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-white/20 rounded-full h-2">
+                    <div className="w-full bg-white/10 rounded-full h-1">
                       <div 
-                        className={`h-2 bg-gradient-to-r from-${skill.color}-400 to-${skill.color}-600 rounded-full transition-all duration-1000 ease-out group-hover:animate-pulse`}
+                        className="h-1 bg-white/40 rounded-full transition-all duration-1000 ease-out"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* Backend Card */}
-            <div className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-500 transform hover:scale-105 hover:-rotate-1">
+            </div>            {/* Backend Card */}
+            <div className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg p-8 shadow-2xl hover:bg-black/30 transition-all duration-300">
               <div className="text-center mb-6">
-                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center text-4xl mb-4 shadow-lg group-hover:animate-bounce">
-                  ⚙️
+                <div className="w-16 h-16 mx-auto bg-white/10 rounded-lg flex items-center justify-center text-2xl mb-4">
+                  <span className="text-white/80">⚙️</span>
                 </div>
-                <h4 className="text-2xl font-bold text-white mb-2">Backend Power</h4>
-                <div className="w-16 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto rounded-full"></div>
+                <h4 className="text-xl font-medium text-white mb-2">Backend</h4>
+                <div className="w-12 h-px bg-white/30 mx-auto"></div>
               </div>
               
               <div className="space-y-4">
                 {[
-                  { name: "Node.js", level: 88, color: "green" },
-                  { name: "Express.js", level: 85, color: "emerald" },
-                  { name: "PostgreSQL", level: 80, color: "blue" },
-                  { name: "MongoDB", level: 82, color: "teal" }
+                  { name: "Node.js", level: 88 },
+                  { name: "Express.js", level: 85 },
+                  { name: "PostgreSQL", level: 80 },
+                  { name: "MongoDB", level: 82 }
                 ].map((skill, index) => (
                   <div key={skill.name} className="space-y-2">
                     <div className="flex justify-between text-white/90">
-                      <span className="font-semibold">{skill.name}</span>
-                      <span className="text-sm">{skill.level}%</span>
+                      <span className="font-medium text-sm">{skill.name}</span>
+                      <span className="text-xs text-white/60">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-white/20 rounded-full h-2">
+                    <div className="w-full bg-white/10 rounded-full h-1">
                       <div 
-                        className={`h-2 bg-gradient-to-r from-${skill.color}-400 to-${skill.color}-600 rounded-full transition-all duration-1000 ease-out group-hover:animate-pulse`}
+                        className="h-1 bg-white/40 rounded-full transition-all duration-1000 ease-out"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
@@ -298,30 +238,30 @@ export default function Home() {
             </div>
 
             {/* Tools & DevOps Card */}
-            <div className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-500 transform hover:scale-105 hover:rotate-1">
+            <div className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg p-8 shadow-2xl hover:bg-black/30 transition-all duration-300">
               <div className="text-center mb-6">
-                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center text-4xl mb-4 shadow-lg group-hover:animate-bounce">
-                  🛠️
+                <div className="w-16 h-16 mx-auto bg-white/10 rounded-lg flex items-center justify-center text-2xl mb-4">
+                  <span className="text-white/80">🛠️</span>
                 </div>
-                <h4 className="text-2xl font-bold text-white mb-2">DevOps & Tools</h4>
-                <div className="w-16 h-1 bg-gradient-to-r from-purple-500 to-violet-500 mx-auto rounded-full"></div>
+                <h4 className="text-xl font-medium text-white mb-2">DevOps & Tools</h4>
+                <div className="w-12 h-px bg-white/30 mx-auto"></div>
               </div>
               
               <div className="space-y-4">
                 {[
-                  { name: "Git & GitHub", level: 95, color: "gray" },
-                  { name: "Docker", level: 75, color: "blue" },
-                  { name: "AWS", level: 70, color: "orange" },
-                  { name: "Vercel", level: 90, color: "black" }
+                  { name: "Git & GitHub", level: 95 },
+                  { name: "Docker", level: 75 },
+                  { name: "AWS", level: 70 },
+                  { name: "Vercel", level: 90 }
                 ].map((skill, index) => (
                   <div key={skill.name} className="space-y-2">
                     <div className="flex justify-between text-white/90">
-                      <span className="font-semibold">{skill.name}</span>
-                      <span className="text-sm">{skill.level}%</span>
+                      <span className="font-medium text-sm">{skill.name}</span>
+                      <span className="text-xs text-white/60">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-white/20 rounded-full h-2">
+                    <div className="w-full bg-white/10 rounded-full h-1">
                       <div 
-                        className={`h-2 bg-gradient-to-r from-${skill.color}-400 to-${skill.color}-600 rounded-full transition-all duration-1000 ease-out group-hover:animate-pulse`}
+                        className="h-1 bg-white/40 rounded-full transition-all duration-1000 ease-out"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
@@ -329,228 +269,193 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Certification Badges */}
+          </div>          {/* Professional Achievements */}
           <div className="text-center">
-            <h4 className="text-3xl font-bold text-white mb-8">
-              🏆 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Achievements Unlocked</span>
+            <h4 className="text-2xl font-light text-white mb-8">
+              Experience & Achievements
             </h4>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { icon: "🚀", title: "Full Stack Master", desc: "5+ Years Experience" },
-                { icon: "⚡", title: "Performance Guru", desc: "Optimized 100+ Apps" },
-                { icon: "🎯", title: "Problem Solver", desc: "1000+ Bugs Squashed" },
-                { icon: "🌟", title: "Open Source Hero", desc: "50+ Contributions" }
-              ].map((badge, index) => (
-                <div key={badge.title} className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-110">
-                  <div className="text-4xl mb-2">{badge.icon}</div>
-                  <div className="text-white font-bold">{badge.title}</div>
-                  <div className="text-white/70 text-sm">{badge.desc}</div>
+                { title: "Full Stack Expert", desc: "5+ Years Experience" },
+                { title: "Performance Focus", desc: "100+ Apps Optimized" },
+                { title: "Problem Solver", desc: "1000+ Issues Resolved" },
+                { title: "Open Source", desc: "50+ Contributions" }
+              ].map((achievement, index) => (
+                <div key={achievement.title} className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg p-4 text-center hover:bg-black/30 transition-all duration-300">
+                  <div className="text-lg font-medium text-white mb-1">{achievement.title}</div>
+                  <div className="text-white/70 text-sm">{achievement.desc}</div>
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Projects Section - ABSOLUTELY MIND-BLOWING */}
-      <section id="projects" className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-rose-900 via-purple-900 to-indigo-900"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-96 h-96 bg-rose-500 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse"></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h3 className="text-5xl md:text-7xl font-black text-white mb-6">
-              <span className="bg-gradient-to-r from-rose-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-                EPIC PROJECTS
-              </span>
+      </section>      {/* Professional Projects Section */}
+      <section id="projects" className="relative py-24 px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
+              Featured Projects
             </h3>
-            <p className="text-2xl text-white/80 max-w-3xl mx-auto">
-              🎯 Check out these game-changing creations that push boundaries! 💥
-            </p>
-            <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-purple-500 mx-auto rounded-full mt-6"></div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="w-16 h-px bg-white/30 mx-auto"></div>
+          </div>          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project 1 */}
-            <div className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl overflow-hidden shadow-2xl hover:bg-white/15 transition-all duration-500 transform hover:scale-105 hover:rotate-1">
-              <div className="h-64 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <span className="relative z-10 text-white text-6xl animate-float">🚀</span>
-                <div className="absolute top-4 right-4 bg-green-400 text-black px-3 py-1 rounded-full font-bold text-xs">
-                  LIVE
+            <div className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg overflow-hidden shadow-2xl hover:bg-black/30 transition-all duration-300">
+              <div className="h-48 bg-white/5 flex items-center justify-center relative">
+                <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
+                  <span className="text-white/80 text-2xl">🛒</span>
+                </div>
+                <div className="absolute top-4 right-4 bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium">
+                  Live
                 </div>
               </div>
-              <div className="p-8">
-                <h4 className="text-2xl font-bold text-white mb-3 group-hover:text-pink-400 transition-colors">
-                  🛒 E-Commerce Empire
+              <div className="p-6">
+                <h4 className="text-xl font-medium text-white mb-3">
+                  E-Commerce Platform
                 </h4>
-                <p className="text-white/80 mb-6 leading-relaxed">
-                  A jaw-dropping full-stack e-commerce platform that handles thousands of users! 
-                  Features AI-powered recommendations, real-time inventory, and seamless payments. 💎
+                <p className="text-white/70 mb-6 leading-relaxed text-sm">
+                  Full-stack e-commerce solution with advanced features including inventory management, 
+                  payment processing, and analytics dashboard.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-semibold">Next.js</span>
-                  <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm font-semibold">Node.js</span>
-                  <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-semibold">PostgreSQL</span>
+                  <span className="bg-white/10 text-white/80 px-3 py-1 rounded-full text-xs">Next.js</span>
+                  <span className="bg-white/10 text-white/80 px-3 py-1 rounded-full text-xs">Node.js</span>
+                  <span className="bg-white/10 text-white/80 px-3 py-1 rounded-full text-xs">PostgreSQL</span>
                 </div>
-                <div className="flex space-x-4">
-                  <a href="#" className="flex-1 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-3 rounded-xl font-semibold text-center hover:scale-105 transition-transform duration-300">
-                    🌐 Live Demo
+                <div className="flex space-x-3">
+                  <a href="#" className="flex-1 bg-white/10 backdrop-blur-xl border border-white/20 text-white px-4 py-2 rounded-lg text-center text-sm font-medium hover:bg-white/15 transition-all duration-300">
+                    Live Demo
                   </a>
-                  <a href="#" className="flex-1 bg-white/20 backdrop-blur text-white px-4 py-3 rounded-xl font-semibold text-center hover:bg-white/30 transition-all duration-300">
-                    💻 Code
+                  <a href="#" className="flex-1 bg-black/20 backdrop-blur-xl border border-white/10 text-white/80 px-4 py-2 rounded-lg text-center text-sm font-medium hover:bg-black/30 hover:text-white transition-all duration-300">
+                    View Code
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Project 2 */}
-            <div className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl overflow-hidden shadow-2xl hover:bg-white/15 transition-all duration-500 transform hover:scale-105 hover:-rotate-1">
-              <div className="h-64 bg-gradient-to-br from-green-500 via-teal-500 to-cyan-500 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <span className="relative z-10 text-white text-6xl animate-bounce-slow">📱</span>
-                <div className="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full font-bold text-xs">
-                  HOT
+            <div className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg overflow-hidden shadow-2xl hover:bg-black/30 transition-all duration-300">
+              <div className="h-48 bg-white/5 flex items-center justify-center relative">
+                <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
+                  <span className="text-white/80 text-2xl">📱</span>
+                </div>
+                <div className="absolute top-4 right-4 bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium">
+                  Demo
                 </div>
               </div>
-              <div className="p-8">
-                <h4 className="text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
-                  ⚡ Task Master Pro
+              <div className="p-6">
+                <h4 className="text-xl font-medium text-white mb-3">
+                  Task Management App
                 </h4>
-                <p className="text-white/80 mb-6 leading-relaxed">
-                  Revolutionary task management that adapts to YOUR workflow! Real-time collaboration, 
-                  AI prioritization, and stunning analytics that make productivity addictive! 🎯
+                <p className="text-white/70 mb-6 leading-relaxed text-sm">
+                  Collaborative task management platform with real-time updates, 
+                  team collaboration features, and comprehensive project tracking.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-semibold">React</span>
-                  <span className="bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full text-sm font-semibold">Socket.io</span>
-                  <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm font-semibold">MongoDB</span>
+                  <span className="bg-white/10 text-white/80 px-3 py-1 rounded-full text-xs">React</span>
+                  <span className="bg-white/10 text-white/80 px-3 py-1 rounded-full text-xs">Socket.io</span>
+                  <span className="bg-white/10 text-white/80 px-3 py-1 rounded-full text-xs">MongoDB</span>
                 </div>
-                <div className="flex space-x-4">
-                  <a href="#" className="flex-1 bg-gradient-to-r from-green-500 to-teal-600 text-white px-4 py-3 rounded-xl font-semibold text-center hover:scale-105 transition-transform duration-300">
-                    🌐 Live Demo
+                <div className="flex space-x-3">
+                  <a href="#" className="flex-1 bg-white/10 backdrop-blur-xl border border-white/20 text-white px-4 py-2 rounded-lg text-center text-sm font-medium hover:bg-white/15 transition-all duration-300">
+                    Live Demo
                   </a>
-                  <a href="#" className="flex-1 bg-white/20 backdrop-blur text-white px-4 py-3 rounded-xl font-semibold text-center hover:bg-white/30 transition-all duration-300">
-                    💻 Code
+                  <a href="#" className="flex-1 bg-black/20 backdrop-blur-xl border border-white/10 text-white/80 px-4 py-2 rounded-lg text-center text-sm font-medium hover:bg-black/30 hover:text-white transition-all duration-300">
+                    View Code
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Project 3 */}
-            <div className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl overflow-hidden shadow-2xl hover:bg-white/15 transition-all duration-500 transform hover:scale-105 hover:rotate-1">
-              <div className="h-64 bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <span className="relative z-10 text-white text-6xl animate-pulse">📊</span>
-                <div className="absolute top-4 right-4 bg-purple-400 text-white px-3 py-1 rounded-full font-bold text-xs">
-                  VIRAL
+            <div className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg overflow-hidden shadow-2xl hover:bg-black/30 transition-all duration-300">
+              <div className="h-48 bg-white/5 flex items-center justify-center relative">
+                <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
+                  <span className="text-white/80 text-2xl">📊</span>
+                </div>
+                <div className="absolute top-4 right-4 bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium">
+                  Beta
                 </div>
               </div>
-              <div className="p-8">
-                <h4 className="text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">
-                  📈 Analytics Beast
+              <div className="p-6">
+                <h4 className="text-xl font-medium text-white mb-3">
+                  Analytics Dashboard
                 </h4>
-                <p className="text-white/80 mb-6 leading-relaxed">
-                  Data visualization that makes executives weep tears of joy! Real-time insights, 
-                  predictive analytics, and charts so beautiful they belong in a museum! 🎨
+                <p className="text-white/70 mb-6 leading-relaxed text-sm">
+                  Advanced data visualization platform with real-time insights, 
+                  predictive analytics, and customizable reporting capabilities.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-sm font-semibold">D3.js</span>
-                  <span className="bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-sm font-semibold">Chart.js</span>
-                  <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-semibold">Python</span>
+                  <span className="bg-white/10 text-white/80 px-3 py-1 rounded-full text-xs">D3.js</span>
+                  <span className="bg-white/10 text-white/80 px-3 py-1 rounded-full text-xs">Chart.js</span>
+                  <span className="bg-white/10 text-white/80 px-3 py-1 rounded-full text-xs">Python</span>
                 </div>
-                <div className="flex space-x-4">
-                  <a href="#" className="flex-1 bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-3 rounded-xl font-semibold text-center hover:scale-105 transition-transform duration-300">
-                    🌐 Live Demo
+                <div className="flex space-x-3">
+                  <a href="#" className="flex-1 bg-white/10 backdrop-blur-xl border border-white/20 text-white px-4 py-2 rounded-lg text-center text-sm font-medium hover:bg-white/15 transition-all duration-300">
+                    Live Demo
                   </a>
-                  <a href="#" className="flex-1 bg-white/20 backdrop-blur text-white px-4 py-3 rounded-xl font-semibold text-center hover:bg-white/30 transition-all duration-300">
-                    💻 Code
+                  <a href="#" className="flex-1 bg-black/20 backdrop-blur-xl border border-white/10 text-white/80 px-4 py-2 rounded-lg text-center text-sm font-medium hover:bg-black/30 hover:text-white transition-all duration-300">
+                    View Code
                   </a>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Call to Action */}
+          </div>          {/* Professional Call to Action */}
           <div className="text-center mt-16">
-            <p className="text-2xl text-white/80 mb-8">
-              Want to see something even MORE incredible? 👀
+            <p className="text-lg text-white/70 mb-8">
+              Interested in seeing more of my work?
             </p>
             <a 
               href="https://github.com/mizulike" 
-              className="group inline-block bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 px-12 py-6 rounded-2xl font-bold text-xl text-white shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 hover:scale-110 transform"
+              className="inline-block bg-white/10 backdrop-blur-xl border border-white/20 px-8 py-3 rounded-lg font-medium text-white hover:bg-white/15 transition-all duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="group-hover:animate-pulse">🔥 EXPLORE ALL PROJECTS 🔥</span>
+              View All Projects
             </a>
           </div>
         </div>
-      </section>
-
-      {/* Contact Section - THE GRAND FINALE */}
-      <section id="contact" className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-blob"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-blob animation-delay-2000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
-        </div>
-
+      </section>      {/* Professional Contact Section */}
+      <section id="contact" className="relative py-24 px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h3 className="text-5xl md:text-7xl font-black text-white mb-6">
-              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 bg-clip-text text-transparent">
-                LET'S CREATE MAGIC
-              </span>
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
+              Get In Touch
             </h3>
-            <p className="text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed">
-              🚀 Ready to build something that will blow minds and change the game? 
-              Let's turn your wildest ideas into reality! ✨
-            </p>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-pink-500 mx-auto rounded-full mt-6"></div>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="w-16 h-px bg-white/30 mx-auto"></div>
+          </div>          <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Contact Form */}
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-10 shadow-2xl">
-              <h4 className="text-3xl font-bold text-white mb-8 text-center">
-                💬 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Drop Me a Line</span>
+            <div className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg p-8 shadow-2xl">
+              <h4 className="text-2xl font-light text-white mb-8 text-center">
+                Send a Message
               </h4>
               
               <form className="space-y-6">
                 <div>
                   <input 
                     type="text" 
-                    placeholder="Your Amazing Name ✨" 
-                    className="w-full bg-white/10 backdrop-blur border border-white/30 rounded-2xl px-6 py-4 text-white placeholder-white/60 focus:outline-none focus:border-pink-400 focus:bg-white/20 transition-all duration-300"
+                    placeholder="Your Name" 
+                    className="w-full bg-white/10 backdrop-blur border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all duration-300"
                   />
                 </div>
                 <div>
                   <input 
                     type="email" 
-                    placeholder="your.email@awesome.com 📧" 
-                    className="w-full bg-white/10 backdrop-blur border border-white/30 rounded-2xl px-6 py-4 text-white placeholder-white/60 focus:outline-none focus:border-pink-400 focus:bg-white/20 transition-all duration-300"
+                    placeholder="your.email@example.com" 
+                    className="w-full bg-white/10 backdrop-blur border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all duration-300"
                   />
                 </div>
                 <div>
                   <textarea 
                     rows={5}
-                    placeholder="Tell me about your incredible project! 🎯" 
-                    className="w-full bg-white/10 backdrop-blur border border-white/30 rounded-2xl px-6 py-4 text-white placeholder-white/60 focus:outline-none focus:border-pink-400 focus:bg-white/20 transition-all duration-300 resize-none"
+                    placeholder="Tell me about your project..." 
+                    className="w-full bg-white/10 backdrop-blur border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all duration-300 resize-none"
                   ></textarea>
                 </div>
                 <button 
                   type="submit"
-                  className="w-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white px-8 py-4 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 hover:scale-105 transform"
+                  className="w-full bg-white/10 backdrop-blur-xl border border-white/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/15 transition-all duration-300"
                 >
-                  🚀 SEND MESSAGE 🚀
+                  Send Message
                 </button>
               </form>
             </div>
@@ -558,110 +463,90 @@ export default function Home() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="text-center lg:text-left">
-                <h4 className="text-4xl font-bold text-white mb-6">
-                  🌟 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Let's Connect!</span>
+                <h4 className="text-2xl font-light text-white mb-6">
+                  Let's Connect
                 </h4>
-                <p className="text-xl text-white/80 leading-relaxed mb-8">
-                  Whether you need a mind-blowing website, a game-changing app, or just want to chat about the latest tech trends - I'm your guy! 💡
+                <p className="text-base text-white/70 leading-relaxed mb-8">
+                  I'm always interested in discussing new opportunities, innovative projects, 
+                  and potential collaborations. Feel free to reach out.
                 </p>
               </div>
 
               {/* Contact Methods */}
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <a 
                   href="mailto:timothy@example.com" 
-                  className="group flex items-center space-x-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  className="flex items-center space-x-4 bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg p-4 hover:bg-black/30 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center text-2xl shadow-lg group-hover:animate-bounce">
-                    📧
+                  <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                    <span className="text-white/80">📧</span>
                   </div>
                   <div>
-                    <div className="text-white font-bold text-lg">Email Me</div>
-                    <div className="text-white/70">timothy@example.com</div>
+                    <div className="text-white font-medium">Email</div>
+                    <div className="text-white/60 text-sm">timothy@example.com</div>
                   </div>
                 </a>
 
                 <a 
                   href="https://calendly.com/timothy-flynn" 
-                  className="group flex items-center space-x-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  className="flex items-center space-x-4 bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg p-4 hover:bg-black/30 transition-all duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center text-2xl shadow-lg group-hover:animate-bounce">
-                    📅
+                  <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                    <span className="text-white/80">📅</span>
                   </div>
                   <div>
-                    <div className="text-white font-bold text-lg">Schedule a Call</div>
-                    <div className="text-white/70">Let's talk strategy!</div>
+                    <div className="text-white font-medium">Schedule a Call</div>
+                    <div className="text-white/60 text-sm">Book a consultation</div>
                   </div>
                 </a>
 
-                <div className="group flex items-center space-x-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-2xl shadow-lg">
-                    🌍
+                <div className="flex items-center space-x-4 bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg p-4">
+                  <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                    <span className="text-white/80">🌍</span>
                   </div>
                   <div>
-                    <div className="text-white font-bold text-lg">Based In</div>
-                    <div className="text-white/70">Everywhere (Remote Ready!)</div>
+                    <div className="text-white font-medium">Location</div>
+                    <div className="text-white/60 text-sm">Remote Available</div>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
-              <div className="flex justify-center lg:justify-start space-x-6 pt-8">
+              <div className="flex justify-center lg:justify-start space-x-4 pt-6">
                 {[
-                  { href: "https://github.com/mizulike", emoji: "💻", label: "GitHub", color: "gray" },
-                  { href: "https://linkedin.com/in/timothy-flynn", emoji: "💼", label: "LinkedIn", color: "blue" },
-                  { href: "https://twitter.com/timothyflynn", emoji: "🐦", label: "Twitter", color: "sky" }
+                  { href: "https://github.com/mizulike", label: "GitHub" },
+                  { href: "https://linkedin.com/in/timothy-flynn", label: "LinkedIn" },
+                  { href: "https://twitter.com/timothyflynn", label: "Twitter" }
                 ].map((social, index) => (
                   <a 
                     key={social.label}
                     href={social.href}
-                    className={`group w-16 h-16 bg-gradient-to-br from-${social.color}-500 to-${social.color}-600 rounded-2xl flex items-center justify-center text-2xl shadow-lg hover:scale-125 transition-all duration-300 hover:shadow-${social.color}-500/25`}
+                    className="w-12 h-12 bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg flex items-center justify-center text-white/80 hover:bg-black/30 hover:text-white transition-all duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span className="group-hover:animate-bounce">{social.emoji}</span>
+                    <span className="text-sm font-medium">{social.label[0]}</span>
                   </a>
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-20">
-            <p className="text-3xl text-white/90 mb-8 font-bold">
-              🔥 Ready to build the FUTURE together? 🔥
-            </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl px-8 py-4 text-white font-semibold">
-                ⚡ Lightning Fast Response
-              </div>
-              <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl px-8 py-4 text-white font-semibold">
-                🎯 100% Commitment
-              </div>
-              <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl px-8 py-4 text-white font-semibold">
-                ✨ Mind-Blowing Results
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Epic Footer */}
-      <footer className="relative bg-black/50 backdrop-blur-lg text-white py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-6">
-            <div className="text-3xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">
+          </div>        </div>
+      </section>      {/* Professional Footer */}
+      <footer className="relative bg-black/30 backdrop-blur-xl text-white py-8 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="mb-4">
+            <div className="text-xl font-light text-white mb-1">
               Timothy Flynn
             </div>
-            <div className="text-white/70">Full Stack Developer & Digital Magician ✨</div>
+            <div className="text-white/60 text-sm">Full Stack Developer</div>
           </div>
-          <p className="text-white/60 mb-4">
-            © 2025 Timothy Flynn. Crafted with ❤️, powered by Next.js & Tailwind CSS.
+          <p className="text-white/50 text-sm mb-2">
+            © 2025 Timothy Flynn. Built with Next.js & Tailwind CSS.
           </p>
-          <p className="text-white/40 text-sm">
-            Made with passion, designed to inspire, built to last. 🚀
+          <p className="text-white/40 text-xs">
+            Crafted with attention to detail.
           </p>
         </div>
       </footer>
